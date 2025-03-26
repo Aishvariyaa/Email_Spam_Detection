@@ -53,10 +53,7 @@ cd Spam-Email-Classifier
 #### 2️⃣ Install Dependencies  
 ```bash
 pip install -r requirements.txt
-```  
-
-#### 3️⃣ Download Dataset  
-📌 Download the dataset from [Kaggle](#) *(Replace with actual link)* and place it in the project folder.  
+```
 
 #### 4️⃣ Run the Jupyter Notebook  
 ```bash

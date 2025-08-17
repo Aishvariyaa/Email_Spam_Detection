@@ -1,91 +1,106 @@
+# 📧 **SpamX – Intelligent Spam Email Classifier (Binary Classification)**
 
-## 📧 Spam Email Classifier (Binary Classification)  
+## 🔍 Overview
 
-### 📌 Overview  
-This project builds a **Spam Email Classifier** that detects whether an email is **Spam or Not Spam** using **machine learning algorithms**. 📩🚫  
+**SpamX** is a Machine Learning-based text classification system that detects whether a message is **Spam (1)** or **Not Spam (0)**.
+It uses **NLP (Natural Language Processing)** techniques with **TF-IDF vectorization** and multiple machine learning models such as **Naïve Bayes, Logistic Regression, and SVM** to ensure accurate classification.
 
-### 🔍 Key Steps  
-✅ **Dataset Preprocessing:**  
-   - Removed **punctuation & special characters** ✂️  
-   - Converted text to **lowercase** 🔡  
-   - Applied **Tokenization & Lemmatization** using **NLTK** 📝  
-   - Transformed text into numerical vectors using **TF-IDF Vectorization** 🔢  
-✅ **Model Training:**  
-   - **Logistic Regression** 📊  
-   - **Support Vector Machine (SVM)** 📈  
-   - **Naïve Bayes Classifier** 🤖  
-✅ **Model Evaluation:**  
-   - **Accuracy, Precision, Recall, F1-Score** for performance comparison 📊  
+---
 
-### 📂 Project Structure  
-```
-Spam-Email-Classifier/
-│── README.md  # Documentation  
-│── spam_classifier.ipynb  # Jupyter Notebook (Model Training & Evaluation)    
-```  
+## 🚀 Features
 
-### 🔗 Dataset Link  
-📌 **Dataset Source:** [Spam SMS Dataset](#) 
+✔️ Text preprocessing (cleaning, stopword removal, tokenization)
+✔️ TF-IDF vectorization for feature extraction
+✔️ Multiple ML models trained & evaluated
+✔️ Achieved **100% accuracy** on the given dataset
+✔️ Extendable to real-world datasets for production use
 
-### 📊 Dataset  
-For this project, we use a **Spam SMS dataset** containing:  
+---
 
-📌 **Features**:  
-- **Text Message:** The actual content of the email/SMS  
-- **Word Frequency Features:** TF-IDF scores of words  
+## 📂 Dataset
 
-🎯 **Target Variable**: **Spam (1) / Not Spam (0)**  
+* **Source:** [SMS Spam Collection Dataset (UCI Repository)](https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection)
+* **Size:** 5,572 messages
+* **Labels:**
 
-### 🔧 Technologies Used  
-🔹 Python  
-🔹 Pandas & NumPy (Data Processing)  
-🔹 Scikit-learn (ML Models & Evaluation)  
-🔹 NLTK (Natural Language Processing)  
-🔹 Matplotlib & Seaborn (Data Visualization)  
+  * `ham` → Not Spam (0)
+  * `spam` → Spam (1)
 
-### 📜 How to Run the Project?  
-#### 1️⃣ Clone the Repository  
+---
+
+## 🛠️ Tech Stack
+
+* **Python** 🐍
+* **Pandas & NumPy** → Data Processing
+* **NLTK** → NLP (stopwords, tokenization, cleaning)
+* **Scikit-learn** → ML Models & Evaluation
+* **Matplotlib & Seaborn** → Visualization
+
+---
+
+## ⚡ Workflow
+
+1. **Data Preprocessing**
+
+   * Lowercasing, removing punctuation & numbers
+   * Removing stopwords (NLTK)
+   * Converting text → vectors with **TF-IDF**
+
+2. **Model Training**
+
+   * **Naïve Bayes (MultinomialNB)**
+   * **Logistic Regression**
+   * **Support Vector Machine (SVM)**
+
+3. **Model Evaluation**
+
+   * Accuracy ✅
+   * Precision ✅
+   * Recall ✅
+   * F1-Score ✅
+
+---
+
+## 📊 Results
+
+| Model                  | Accuracy | Precision | Recall | F1-Score |
+| ---------------------- | -------- | --------- | ------ | -------- |
+| Naïve Bayes            | 100%     | 1.00      | 1.00   | 1.00     |
+| Logistic Regression    | 100%     | 1.00      | 1.00   | 1.00     |
+| Support Vector Machine | 100%     | 1.00      | 1.00   | 1.00     |
+
+⚠️ **Note:** Perfect accuracy suggests the dataset may be too clean or overfitting. Testing with larger real-world datasets is recommended.
+
+---
+
+## 🖥️ How to Run
+
 ```bash
-git clone https://github.com/Aishvariyaa/Spam-Email-Classifier.git
-cd Spam-Email-Classifier
-```  
+# Clone repo
+git clone https://github.com/Aishvariyaa/SpamShield.git
+cd SpamX
 
-#### 2️⃣ Install Dependencies  
-```bash
+# Install dependencies
 pip install -r requirements.txt
+
+# Run Jupyter Notebook
+jupyter notebook SMS Spam.ipynb
 ```
 
-#### 4️⃣ Run the Jupyter Notebook  
-```bash
-jupyter notebook spam_classifier.ipynb
-```  
+---
 
-### 📈 Model Performance  
-📌 **Model Results Based on Your Provided Data:**  
+## 📌 Future Enhancements
 
-#### 🔹 **Naïve Bayes Model**  
-- **Accuracy:** **100.0%**  
-- **Precision:** 1.00  
-- **Recall:** 1.00  
-- **F1-Score:** 1.00  
+🔹 Test with large real-world email datasets
+🔹 Implement Deep Learning models (LSTM, BERT)
+🔹 Deploy as a **Flask/FastAPI service** for real-time filtering
+🔹 Build a simple **web app** for users to test messages
 
-#### 🔹 **Logistic Regression Model**  
-- **Accuracy:** **100.0%**  
-- **Precision:** 1.00  
-- **Recall:** 1.00  
-- **F1-Score:** 1.00  
+---
 
-#### 🔹 **Support Vector Machine (SVM) Model**  
-- **Accuracy:** **100.0%**  
-- **Precision:** 1.00  
-- **Recall:** 1.00  
-- **F1-Score:** 1.00  
+## 🔖 Tagline
+💡 "SpamX -  Smart AI-powered email spam detection system"
 
-📌 **Key Observations**  
-- All models achieved **100% accuracy, precision, recall, and F1-score**, indicating a **perfect classification** on the test dataset. 🎯  
-- This might suggest the dataset is **too clean or too small**, or there could be potential **overfitting** that needs further analysis.  
+---
 
-### 📌 Next Steps  
-🔹 Test on a **larger, real-world dataset** to check for overfitting.  
-🔹 Experiment with **Deep Learning models (LSTMs)** for enhanced text classification.  
-🔹 Deploy the model as a **Flask API** for real-time email filtering.  
+
